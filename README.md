@@ -11,8 +11,8 @@
 
 ```zsh
 $ cd ~/ # cd
-$ git clone https://github.com/ogty/desktop-schedule-viewer 
-$ source ./desktop-schedule-viewer/setup.sh
+$ git clone https://github.com/ogty/desktop-calendar-viewer 
+$ source ./desktop-calendar-viewer/setup.sh
 ```
 
 ### ☁️ Google Cloud Platform
