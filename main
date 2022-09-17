@@ -54,6 +54,6 @@ today = datetime.now().day
 subprocess.run([
     "ic",
     "conv",
-    f"google-calendar-{today}",
+    f"{FILE_NAME}.txt@google-calendar-{today}",
     f"https://ssl.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_{today}_2x.png",
 ])
