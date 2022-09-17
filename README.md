@@ -62,7 +62,7 @@ END_FORMAT='%H:%M'
 You can update your calendar every day at 00:00 midnight by following these steps
 
 ```zsh
-$ echo '0 0 * * * source ~/desktop-calendar-viewer/main' | pbcopy
+$ echo '0 0 * * * python3 ~/desktop-calendar-viewer/main.py' | pbcopy
 $ crontab -e 
 ```
 

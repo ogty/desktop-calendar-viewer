@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 from datetime import datetime, timedelta
 import os
 import subprocess
@@ -24,14 +22,12 @@ gapi_creds = google.auth.load_credentials_from_file("credentials.json", auth_url
 service = googleapiclient.discovery.build("calendar", "v3", credentials=gapi_creds)
 
 utc_now_str = datetime.utcnow().isoformat()
-time_min = "%sZ" % utc_now_str
-time_max = datetime.fromisoformat(utc_now_str) + timedelta(days=PERIOD)
-time_max = "%sZ" % time_max.isoformat()
+time_min = utc_now_str + 'Z'
+time_max = datetime.fromisoformat(utc_now_str) + timedelta(days=int(PERIOD))
+time_max = time_max.isoformat() + 'Z'
 
-# Google Calendar > My Calendar > Settings and Sharing > Calendar ID
-calendar_id = CALENDAR_ID
 events = service.events().list(
-    calendarId=calendar_id,
+    calendarId=CALENDAR_ID,
     timeMin=time_min,
     timeMax=time_max,
     singleEvents=True,
@@ -47,13 +43,13 @@ for schedule in schedules:
     end = datetime.fromisoformat(schedule["end"]["dateTime"]).strftime(END_FORMAT)
     string_schedules += f"{summary}: {start} ~ {end}\n"
 
-with open(f"~/Desktop/{FILE_NAME}.txt", 'w', encoding="utf-8") as f:
+with open(f"../Desktop/{FILE_NAME}.txt", 'w', encoding="utf-8") as f:
     f.write(string_schedules)
 
 today = datetime.now().day
 subprocess.run([
     "ic",
     "conv",
-    f"{FILE_NAME}.txt@google-calendar-{today}",
+    f"../Desktop/{FILE_NAME}.txt@google-calendar-{today}",
     f"https://ssl.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_{today}_2x.png",
 ])
