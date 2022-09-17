@@ -16,9 +16,14 @@ FILE_NAME = os.environ["FILE_NAME"]
 START_FORMAT = os.environ["START_FORMAT"]
 END_FORMAT = os.environ["END_FORMAT"]
 
+BASE_DIR = os.path.dirname(__file__)
+HOME_DIR = os.environ["HOME"]
+DESKTOP_PATH = os.path.join(HOME_DIR, "Desktop")
+FILE_PATH = os.path.join(DESKTOP_PATH, f"{FILE_NAME}.txt")
+
 
 auth_url = ["https://www.googleapis.com/auth/calendar"]
-gapi_creds = google.auth.load_credentials_from_file("credentials.json", auth_url)[0]
+gapi_creds = google.auth.load_credentials_from_file(f"{BASE_DIR}/credentials.json", auth_url)[0]
 service = googleapiclient.discovery.build("calendar", "v3", credentials=gapi_creds)
 
 utc_now_str = datetime.utcnow().isoformat()
@@ -43,13 +48,13 @@ for schedule in schedules:
     end = datetime.fromisoformat(schedule["end"]["dateTime"]).strftime(END_FORMAT)
     string_schedules += f"{summary}: {start} ~ {end}\n"
 
-with open(f"../Desktop/{FILE_NAME}.txt", 'w', encoding="utf-8") as f:
+with open(f"{DESKTOP_PATH}/{FILE_NAME}.txt", 'w', encoding="utf-8") as f:
     f.write(string_schedules)
 
 today = datetime.now().day
 subprocess.run([
     "ic",
     "conv",
-    f"../Desktop/{FILE_NAME}.txt@google-calendar-{today}",
+    f"{FILE_PATH}@google-calendar-{today}",
     f"https://ssl.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_{today}_2x.png",
 ])
