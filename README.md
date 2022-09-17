@@ -67,7 +67,7 @@ $ crontab -e
 ```
 
 1. Press: <kbd>i</kbd>
-2. Press: <kbd>Command</kbd> + <kdb>v</kbd>
+2. Press: <kbd>Command</kbd> + <kbd>v</kbd>
 3. Press: <kbd>Escape</kbd>
 4. Enter: `:wq`
 
