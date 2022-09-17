@@ -6,7 +6,7 @@
 
 ## ⚙️ Setup
 
-> **Note**
+> **Note**  
 > Please make [iconic-commands](https://github.com/ogty/iconic-commands) available in advance.
 
 ```zsh
@@ -32,7 +32,7 @@ $ source ./desktop-schedule-viewer/setup.sh
 5. ADD KEY > Create new key > JSON > CREATE
 6. Save in this directory as `credentials.json`
 
-> **Note**
+> **Note**  
 > If you do not have a service account, click `CREATE SERVICE ACCOUNT` to create an account
 
 #### 📎 Get Calendar ID
@@ -66,13 +66,15 @@ $ echo '0 0 * * * source ~/desktop-schedule-viewer/main' | pbcopy
 $ crontab -e 
 ```
 
-1. Press: <kdb>i</kdb>
-2. Press: <kdb>Command</kdb> + <kdb>v</kdb>
-3. Press: <kdb>Escape</kdb>
+1. Press: <kbd>i</kbd>
+2. Press: <kbd>Command</kbd> + <kdb>v</kbd>
+3. Press: <kbd>Escape</kbd>
 4. Enter: `:wq`
 
 ## 📝 Usage
 
 A text file of the Google Calendar icon for that date will be generated on your desktop.
-Once clicked, you can Quick Look by pressing <kdb>Space</kdb> once.
+
+Once clicked, you can Quick Look by pressing <kbd>Space</kbd> once.
+
 Now you can see your schedule.
