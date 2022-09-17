@@ -70,7 +70,7 @@ $ crontab -e
 2. Press: <kbd>Command</kbd> + <kbd>v</kbd>
 3. Press: <kbd>Escape</kbd>
 4. Enter: `:wq`
-5. Press OK
+5. Click OK
 
 ## 📝 Usage
 
