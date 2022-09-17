@@ -29,7 +29,7 @@ $ source ./desktop-calendar-viewer/setup.sh
 2. Service Accounts
 3. Select the service account to use
 4. Click on the tab KEYS
-5. ADD KEY > Create new key > JSON > CREATE
+5. ADD KEY ▶︎ Create new key ▶︎ JSON ▶︎ CREATE
 6. Save in this directory as `credentials.json`
 
 > **Note**  
@@ -47,7 +47,7 @@ $ source ./desktop-calendar-viewer/setup.sh
 
 ```
 CALENDAR_ID=''
-PERIOD=7
+PERIOD='7'
 FILE_NAME='calendar'
 START_FORMAT='%m/%d - %H:%M'
 END_FORMAT='%H:%M'
