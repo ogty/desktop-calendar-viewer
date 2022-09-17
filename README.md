@@ -1,4 +1,4 @@
-<h1>Desktop Calendar Viewer</h1>
+<h1 align="center">Desktop Calendar Viewer</h1>
 
 <div align="center">
   <img src="./image.png" />
