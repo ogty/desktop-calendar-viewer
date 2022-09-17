@@ -73,8 +73,6 @@ $ crontab -e
 
 ## 📝 Usage
 
-A text file of the Google Calendar icon for that date will be generated on your desktop.
-
-Once clicked, you can Quick Look by pressing <kbd>Space</kbd> once.
-
-Now you can see your schedule.
+A text file of the Google Calendar icon for that date will be generated on your desktop.  
+Once clicked, you can Quick Look by pressing <kbd>Space</kbd> once.  
+Now you can see your schedule.  
