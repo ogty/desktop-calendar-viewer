@@ -52,9 +52,4 @@ with open(f"{DESKTOP_PATH}/{FILE_NAME}.txt", 'w', encoding="utf-8") as f:
     f.write(string_schedules)
 
 today = datetime.now().day
-subprocess.run([
-    "ic",
-    "conv",
-    f"{FILE_PATH}@google-calendar-{today}",
-    f"https://ssl.gstatic.com/calendar/images/dynamiclogo_2020q4/calendar_{today}_2x.png",
-])
+subprocess.run(["ic", "conv", f"{FILE_PATH}@google-calendar-{today}"])
