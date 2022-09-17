@@ -24,9 +24,9 @@ gapi_creds = google.auth.load_credentials_from_file("credentials.json", auth_url
 service = googleapiclient.discovery.build("calendar", "v3", credentials=gapi_creds)
 
 utc_now_str = datetime.utcnow().isoformat()
-time_min = datetime.fromisoformat(utc_now_str) - timedelta(days=PERIOD)
-time_min = "%sZ" % time_min.isoformat()
-time_max = "%sZ" % utc_now_str
+time_min = "%sZ" % utc_now_str
+time_max = datetime.fromisoformat(utc_now_str) + timedelta(days=PERIOD)
+time_max = "%sZ" % time_max.isoformat()
 
 # Google Calendar > My Calendar > Settings and Sharing > Calendar ID
 calendar_id = CALENDAR_ID

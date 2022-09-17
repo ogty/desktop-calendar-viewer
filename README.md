@@ -53,7 +53,7 @@ START_FORMAT='%m/%d - %H:%M'
 END_FORMAT='%H:%M'
 ```
 
-- `PERIOD` is the calendar period to be retrieved.
+- `PERIOD` specifies the period from that date.
 - `FILE_NAME` is the name of the file to be created on the desktop.
 - `START_FORMAT` and `END_FORMAT` are formats used to represent the time of the appointment obtained from the API.
 
@@ -70,6 +70,7 @@ $ crontab -e
 2. Press: <kbd>Command</kbd> + <kbd>v</kbd>
 3. Press: <kbd>Escape</kbd>
 4. Enter: `:wq`
+5. Press OK
 
 ## 📝 Usage
 
