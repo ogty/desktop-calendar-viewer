@@ -46,7 +46,7 @@ for schedule in schedules:
     summary = schedule["summary"]
     start = datetime.fromisoformat(schedule["start"]["dateTime"]).strftime(START_FORMAT)
     end = datetime.fromisoformat(schedule["end"]["dateTime"]).strftime(END_FORMAT)
-    string_schedules += f"{summary}: {start} ~ {end}\n"
+    string_schedules += f"{start} ~ {end} | {summary}\n"
 
 with open(f"{DESKTOP_PATH}/{FILE_NAME}.txt", 'w', encoding="utf-8") as f:
     f.write(string_schedules)
